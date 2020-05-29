@@ -1,0 +1,1001 @@
+%paragraph {
+    font-size: .938em;
+    margin: 0 auto .5em;
+    width: 90%;
+    display: block;
+    color: #444;
+}
+
+// more有顏色按鈕
+%more_color {
+    width: 100%;
+    color: #FFF;
+    background: $secondaryColor;
+    border: 1px solid $secondaryColor;
+
+    &:focus {
+        background: darken($secondaryColor, 10);
+        border: 1px solid darken($secondaryColor, 10);
+
+        &:before {
+            background: darken($secondaryColor, 20);
+        }
+    }
+}
+
+%time {
+    font-size: .813em;
+    margin: 0 auto .2em 0;
+    max-width: 100px;
+    @include border-radius(10px);
+    display: block;
+    overflow: hidden;
+    color: #666;
+    padding: .1em 1em;
+    vertical-align: middle;
+    background: #F1F1F1;
+
+    &:before {
+        display: inline-block;
+        content: "";
+        width: 12px;
+        height: 15px;
+        margin-right: .5em;
+        background: url(../images/icon/icon_clock.svg) no-repeat center bottom;
+        background-size: 10px;
+        opacity: .5;
+    }
+}
+
+// 首頁輪播
+.mpSlider {
+    width: 100%;
+    padding-bottom: 3em;
+    @include gutter(0);
+
+    .img-container {
+        @include aspect-ratio(4, 1);
+    }
+}
+
+// 便民服務
+.service {
+    @include gutter;
+
+    ul {
+        @include li-reset;
+
+        .slick-prev {
+            left: 3px;
+        }
+
+        .slick-next {
+            right: 3px;
+        }
+
+        li {
+            margin: 0px 1em;
+
+            a {
+
+                &:hover,
+                &:focus {
+                    .pic {
+                        background: $secondaryColor;
+                    }
+
+                    h3 a {
+                        color: $secondaryColor;
+                    }
+                }
+            }
+
+            text-align: center;
+
+            .pic {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100px;
+                height: 100px;
+                margin: 0 auto 1em;
+                @include border-radius(50%);
+                background: $primaryColor;
+
+                img {
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+
+            h3 {
+                font-size: 1em;
+                text-align: center;
+                width: 80%;
+                line-height: 1.5em;
+                display: block;
+                height: 4.5em;
+                margin: 0px auto;
+                overflow: hidden;
+            }
+        }
+    }
+}
+
+// 重點業務 focus
+.focus {
+    @include gutter;
+
+    ul {
+        @include li-reset;
+        text-align: left;
+
+        li {
+            width: 30%;
+            position: relative;
+            height: 4em;
+            @include box-shadow(2px 2px 5px RGBA(0, 0, 0, .4));
+            display: block;
+            margin: 0px 5% 1.5em 0;
+            float: left;
+
+            &:nth-child(2n) {
+                .pic {
+                    background: $color-orange;
+                }
+            }
+
+            &:nth-child(3n) {
+                margin-right: 0;
+
+                .pic {
+                    background: $color-blue;
+                }
+
+                @include screen('tablet') {
+                    margin: 0px 5% 1.5em 0;
+                }
+
+                @include screen('mobile') {
+                    margin: 0 auto 1em;
+                }
+            }
+
+            &:nth-child(4n) {
+                .pic {
+                    background: $color-green;
+                }
+            }
+
+            &:nth-child(6n) {
+                .pic {
+                    background: $color-purple;
+                }
+            }
+
+            @include screen('tablet') {
+                width: 40%;
+
+                &:nth-child(2n) {
+                    margin-right: 0;
+                }
+            }
+
+            @include screen('mobile') {
+                width: 80%;
+                float: none;
+                margin: 0 auto 1em;
+                @include box-shadow(2px 2px 5px RGBA(0, 0, 0, .2));
+
+                &:nth-child(2n) {
+                    margin-right: auto;
+                }
+
+                &:nth-child(3n) {
+                    margin: 0 auto 1em;
+                }
+            }
+
+            a {
+                display: block;
+                padding: 0px 1em 0px 4.5em;
+                line-height: 4em;
+                @include text-overflow;
+
+                .pic {
+                    position: absolute;
+                    width: 4em;
+                    height: 4em;
+                    top: 0;
+                    left: 0;
+                    background: $secondaryColor;
+
+                    img {
+                        width: 60%;
+                        height: 60%;
+                        margin: 20% auto 0;
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//news_simpleLink 最新消息 簡單條列
+.news_simple_link {
+    @include gutter;
+
+    &>ul {
+        @include li-reset;
+
+        &>li>a {
+            line-height: 1.5em;
+            position: relative;
+            padding: .65em .5em .65em 1.5em;
+            transition: .3s ease-out;
+
+            &:before {
+                content: "";
+                position: absolute;
+                top: 1.1em;
+                left: .2em;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 4px 0 4px 7px;
+                border-color: transparent transparent transparent #999;
+            }
+        }
+    }
+
+    li {
+        //margin: 0 0 1.3em 0;
+        padding: 0;
+        position: relative;
+        text-align: left;
+        border-bottom: 1px #CCC dashed;
+
+        @include screen('mobile') {
+            @include text-overflow();
+        }
+
+        a {
+            @include text-overflow;
+            margin-right: 120px;
+            display: block;
+
+            @include screen('mobile') {
+                width: 70%;
+            }
+        }
+
+        time {
+            display: inline-block;
+            margin: 0 0 0 1em;
+            padding: .65em 0;
+            font-size: .813em;
+            text-align: center;
+            color: #666;
+            line-height: 2em;
+            width: 120px;
+            height: 100%;
+            position: absolute;
+            right: 0;
+            top: 0;
+            box-sizing: border-box;
+
+            @include screen('mobile') {
+                text-align: right;
+            }
+        }
+    }
+}
+
+.tabSet {
+    .tabContent {
+        li {}
+    }
+}
+
+// 廣告輪播
+.adSlider {
+    @include gutter(70px);
+    margin-bottom: 20px;
+
+    @include screen('mobile') {
+        @include gutter();
+    }
+
+    .slick-prev {
+        background: url(../vendor/slick/icon_arrow_left_inverse.png) no-repeat center center;
+        background-size: 80%;
+        left: -15px;
+    }
+
+    .slick-next {
+        background: url(../vendor/slick/icon_arrow_right_inverse.png) no-repeat center center;
+        background-size: 80%;
+        right: -15px;
+    }
+
+    .img-container {
+        width: 165px;
+        height: 55px;
+        margin: 0px 15px;
+
+        a {
+            display: block;
+            text-align: center;
+
+            img {
+                margin: 0 auto;
+            }
+        }
+
+        &:focus {
+            &:before {
+                content: "";
+                position: absolute;
+                z-index: 9;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                box-shadow: 0 0px 0px 3px $primaryColor inset;
+            }
+        }
+    }
+}
+
+// 跑馬燈
+.marquee,
+.marquee-2 {
+    height: 45px;
+    display: block;
+    overflow: hidden;
+    background: #FFF;
+    margin: .5em 15px;
+    text-align: left;
+    padding: 0 3em 0 2em;
+    position: relative;
+    @include border-radius(6px);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, .2) inset;
+    @include gradient(#E1E1E1, #FEFEFE, vertical);
+    @include gutter;
+
+    ul {
+        @include li-reset;
+    }
+
+    .slick-prev {
+        width: 10px;
+        height: 10px;
+        transform: rotate(90deg);
+        right: 0px !important;
+        top: 1px !important;
+        left: auto;
+        opacity: .5;
+        background: url(../vendor/slick/icon_arrow_up_s.png) no-repeat center center;
+        background-size: 16px;
+        width: 20px !important;
+        height: 20px !important;
+        box-shadow: none;
+
+        &:hover,
+        &:focus {
+            opacity: 1;
+        }
+
+        &:before {
+            width: 10px !important;
+            height: 10px !important;
+        }
+    }
+
+    .slick-next {
+        width: 10px;
+        height: 10px;
+        transform: rotate(-90deg);
+        right: 0px !important;
+        top: 22px !important;
+        left: auto;
+        opacity: .5;
+        width: 20px !important;
+        height: 20px !important;
+        background: url(../vendor/slick/icon_arrow_up_s.png) no-repeat center center;
+        background-size: 16px;
+        box-shadow: none;
+
+        &:hover,
+        &:focus {
+            opacity: 1;
+        }
+
+        &:before {
+            width: 10px !important;
+            height: 10px !important;
+        }
+    }
+
+    &>div {
+        padding: 0;
+        margin: 0;
+    }
+
+    a {
+        display: block;
+        line-height: 40px;
+        margin-right: 3em;
+        font-weight: bold;
+        @include text-overflow;
+    }
+}
+
+//左右文字跑馬燈
+.marquee-2 {
+
+    padding: 0 30px;
+
+    .slick-prev {
+
+        transform: rotate(0deg);
+        left: -22px !important;
+        top: 50% !important;
+        right: auto;
+        margin-top: -10px;
+
+        &:hover,
+        &:focus {
+            opacity: 1;
+        }
+
+        &:before {
+            width: 10px !important;
+            height: 10px !important;
+        }
+    }
+
+    .slick-next {
+        transform: rotate(180deg);
+        right: -22px !important;
+        top: 50% !important;
+        left: auto;
+        margin-top: -10px;
+
+        &:hover,
+        &:focus {
+            opacity: 1;
+        }
+
+        &:before {
+            width: 10px !important;
+            height: 10px !important;
+        }
+    }
+
+    &>div {
+        padding: 0;
+        margin: 0;
+    }
+
+    a {
+        display: block;
+        line-height: 40px;
+        margin: 2px 5px;
+        font-weight: bold;
+        @include text-overflow;
+    }
+}
+
+//文字連結
+.text_link {
+    h2 {
+        &.title {
+            background: url(../images/h3_bg.png) no-repeat center bottom;
+            padding-bottom: 50px;
+            font-weight: 800;
+        }
+    }
+
+    @include gutter();
+
+    ul {
+        @include li-reset;
+
+        li {
+            text-align: left;
+            display: block;
+            border-bottom: 1px dotted #BBB;
+
+            time {
+                float: right;
+                display: inline-block;
+                width: 90px;
+                padding: .5em 0;
+                font-size: 0.813em;
+                color: lighten($color-word, 20);
+            }
+
+            a {
+                display: block;
+                padding: .5em .5em .5em 1.2em;
+                position: relative;
+                font-size: 0.938em;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+
+                &:before {
+                    position: absolute;
+                    top: 1em;
+                    left: .2em;
+                    content: "";
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                    border-width: 4px 0 4px 7px;
+                    border-color: transparent transparent transparent $color-gray;
+                }
+            }
+        }
+    }
+}
+
+// 活動花絮
+.single_photo {
+    text-align: left;
+    //@include gutter();
+
+    .img-container {
+        @include aspect-ratio(4, 3);
+
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+
+        &+h3 {
+            display: block;
+            margin: .5em auto;
+            line-height: 1.5em;
+            text-align: left;
+
+            a {
+                color: $primaryColor;
+
+                &:hover,
+                &:focus {
+                    color: darken($primaryColor, 10);
+                }
+            }
+        }
+
+        &~p {
+            @extend %paragraph;
+        }
+    }
+}
+
+.multi_photo {
+    @include gutter();
+
+    ul {
+        @include li-reset;
+
+        li {
+            margin: 0px 1em 1em;
+            padding: .5em;
+            min-height: 250px;
+            border: 1px solid #DDD;
+            text-align: left;
+            @include border-radius(4px);
+            @include box-shadow(0px 0px 10px RGBA(0, 0, 0, .15));
+
+            a {
+                display: block;
+
+                h3 {
+                    width: 90%;
+                    overflow: hidden;
+                    display: block;
+                    height: 3em;
+                    margin: .5em auto;
+                    line-height: 1.5em;
+                    text-align: left;
+                    color: $primaryColor;
+
+                    &:hover,
+                    &:focus {
+                        h3 {
+                            color: darken($primaryColor, 10);
+                        }
+                    }
+                }
+
+                p {
+                    @extend %paragraph;
+                }
+            }
+        }
+    }
+
+    .slick-prev {
+        left: 3px;
+        background: url(../vendor/slick/icon_arrow_left.png) center center no-repeat RGBA(0, 0, 0, .5) !important;
+        background-size: 30px 30px !important;
+
+        &:hover,
+        &:focus {
+            background: url(../vendor/slick/icon_arrow_left.png) center center no-repeat RGBA(0, 0, 0, .8) !important;
+            background-size: 30px 30px !important;
+        }
+    }
+
+    .slick-next {
+        right: 3px;
+        background: url(../vendor/slick/icon_arrow_right.png) center center no-repeat RGBA(0, 0, 0, .5) !important;
+        background-size: 30px 30px !important;
+
+        &:hover,
+        &:focus {
+            background: url(../vendor/slick/icon_arrow_right.png) center center no-repeat RGBA(0, 0, 0, .8) !important;
+            background-size: 30px 30px !important;
+        }
+    }
+}
+
+// 影音專區
+.single_video {
+    text-align: left;
+
+    .youtube {
+        @include aspect-ratio(4, 3);
+        width: 100%;
+
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+        }
+    }
+
+    .img-container {
+        @include aspect-ratio(4, 3);
+        width: 100%;
+        display: block;
+
+        // height: 200px;
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        &:after {
+            content: "";
+            width: 48px;
+            height: 48px;
+            background: url(../images/icon_play.png) no-repeat center center;
+            background-size: cover;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -24px;
+            margin-left: -24px;
+            z-index: 1;
+        }
+    }
+
+    h3 {
+        display: block;
+        margin: .5em auto;
+        line-height: 1.5em;
+        text-align: left;
+
+        a {
+            color: $primaryColor;
+
+            &:hover,
+            &:focus {
+                color: darken($primaryColor, 20);
+            }
+        }
+    }
+
+    p {
+        @extend %paragraph;
+    }
+
+    a {
+        &:focus {
+            .pic {
+                outline: 2px solid $aHover;
+            }
+        }
+    }
+}
+
+.multi_video {
+    ul {
+        @include li-reset;
+
+        li {
+            margin: 0px 1em 1em;
+            padding: .5em;
+            min-height: 250px;
+            border: 1px solid #DDD;
+            text-align: left;
+            @include border-radius(4px);
+            @include box-shadow(0px 0px 10px RGBA(0, 0, 0, .15));
+
+            .youtube {
+                @include aspect-ratio(4, 3);
+
+                iframe {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            .img-container {
+                @include aspect-ratio(16, 9);
+                width: 100%;
+                display: block;
+
+                // height: 200px;
+                img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+
+                &:after {
+                    content: "";
+                    width: 48px;
+                    height: 48px;
+                    background: url(../images/icon_play.png) no-repeat center center;
+                    background-size: cover;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    margin-top: -24px;
+                    margin-left: -24px;
+                    z-index: 1;
+                }
+            }
+
+            h3 {
+                width: 90%;
+                overflow: hidden;
+                display: block;
+                height: 3em;
+                margin: .5em auto;
+                line-height: 1.5em;
+                text-align: left;
+
+                a {
+                    color: $secondaryColor;
+
+                    &:hover,
+                    &:focus {
+                        color: darken($secondaryColor, 10);
+                    }
+                }
+            }
+
+            p {
+                @extend %paragraph;
+            }
+
+            a {
+                &:focus {
+                    .pic {
+                        outline: 2px solid $aHover;
+                    }
+                }
+            }
+        }
+    }
+
+    .slick-prev {
+        left: 3px;
+        background: url(../vendor/slick/icon_arrow_left.png) center center no-repeat RGBA(0, 0, 0, .5) !important;
+        background-size: 30px 30px !important;
+
+        &:hover,
+        &:focus {
+            background: url(../vendor/slick/icon_arrow_left.png) center center no-repeat RGBA(0, 0, 0, .8) !important;
+            background-size: 30px 30px !important;
+        }
+    }
+
+    .slick-next {
+        right: 3px;
+        background: url(../vendor/slick/icon_arrow_right.png) center center no-repeat RGBA(0, 0, 0, .5) !important;
+        background-size: 30px 30px !important;
+
+        &:hover,
+        &:focus {
+            background: url(../vendor/slick/icon_arrow_right.png) center center no-repeat RGBA(0, 0, 0, .8) !important;
+            background-size: 30px 30px !important;
+        }
+    }
+}
+
+.mp_info {}
+
+.ad_banner {
+    ul {
+        @include li-reset;
+
+        li {
+            display: inline-block;
+            //width: 150px;
+            //height: 53px;
+            //margin: 0px 15px 10px;
+            padding:0 1em;
+            box-sizing: border-box;
+            text-align: center;
+        }
+    }
+}
+
+//卡片式條列
+.multi_cards {
+    margin: 1em 0;
+
+    ul {
+        @include li-reset;
+        overflow: hidden;
+    }
+
+    .col {
+        &:nth-child(3n+2) {
+            h2 {
+                background: $third-color;
+
+                &:after {
+                    border-color: $third-color transparent transparent transparent;
+                }
+            }
+        }
+
+        &:nth-child(3n+3) {
+            h2 {
+                background: $fourth-color;
+
+                &:after {
+                    border-color: $fourth-color transparent transparent transparent;
+                }
+            }
+        }
+    }
+}
+
+.list_card {
+    @include gutter();
+    text-align: left;
+    margin-bottom: 1em;
+
+    &>.card_content {
+        position: relative;
+        background: #f6f6f6;
+        padding: 1.5em 1em;
+        min-height: 250px;
+
+        >ul {
+            li {
+                padding: .5em 0;
+                display: flex;
+                border-bottom: 1px dotted $color-gray;
+
+                time {
+                    flex: 0 0 90px;
+                    margin-right: 1em;
+                    font-size: .813em;
+                    color: lighten($color-word, 20);
+                }
+
+                a {
+                    flex: 0 1 auto;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 2;
+                    overflow: hidden;
+                    height: 46px;
+
+                    &:hover {
+                        color: $aHover;
+                    }
+                }
+            }
+        }
+
+        a.more {
+            margin: 1em auto;
+        }
+    }
+
+    h2 {
+        position: relative;
+        background: darken($primaryColor, 10);
+        color: #fff;
+        font-size: 1em;
+        padding: .85em 1em;
+        margin: 0;
+
+        &:after {
+            content: "";
+            position: absolute;
+            z-index: 10;
+            left: 1em;
+            top: 100%;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 8px 6px 0 6px;
+            border-color: darken($primaryColor, 10) transparent transparent transparent;
+        }
+    }
+
+}
+.mp_service{
+    .col{
+        @include gutter();
+    }
+}
+//小廣告展開/收合
+.ad_banner_accordion{
+    padding:1em 0;
+    ul{
+        margin:0;
+        padding: 1em 0;
+        overflow:hidden;
+    }
+    li{
+        @include make-xs-column(6);
+        @include make-sm-column(4);
+        @include make-md-column(2);
+        @include make-lg-column(2);
+        @include gutter();
+        margin-bottom:1em;
+    }
+    .img-container, .btn_ad_more{
+        width: 165px;
+        height: 55px;
+        margin: 0px auto;
+        box-sizing: border-box;
+        img{
+            border:1px solid $color-gray;
+        }
+    }
+    .btn_ad_more{
+        border-radius: 0;
+        background: $primaryColor;
+    }
+    .ad_more{
+        display:none;
+        h3{
+            text-align: center;
+        }
+    }
+}

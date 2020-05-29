@@ -1,0 +1,186 @@
+// 自動產生編號：https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters
+.np {
+
+    ul,
+    ol {
+        overflow: hidden;
+        padding: 1em 0;
+        margin: 0;
+        overflow: hidden;
+    }
+
+    li {
+        display: block;
+        width: 49%;
+        margin: 0 1% 10px 0;
+        float: left;
+        @include box-sizing(border-box);
+
+        &:nth-child(even) {
+            width: 50%;
+            margin-right: 0px;
+        }
+
+        @include screen('mobile') {
+            float: none;
+            width: 96%;
+            margin: 0px auto 10px;
+
+            &:nth-child(even) {
+                width: 96%;
+                margin-right: auto;
+            }
+        }
+
+        a {
+            border-radius: 4px;
+            border: 2px solid #DDD;
+            padding: 1em;
+            display: block;
+            vertical-align: top;
+            @include text-overflow;
+            position: relative;
+            @include aSetting_nocolor;
+
+            .num {
+                position: absolute;
+                width: 1em;
+                top: 1em;
+                left: .5em;
+                text-align: right;
+
+                &:after {
+                    content: ".";
+                    display: inline-block;
+                }
+            }
+
+            &:hover,
+            &:focus {
+                border: 2px solid $primaryColor;
+            }
+        }
+    }
+}
+
+.np_2 {
+    border-radius: 4px;
+    border: 2px solid #DDD;
+    padding: 1em;
+
+    .lplist {
+        margin: 0;
+        padding: 0;
+        li{
+            a{
+                padding:.5em 0;
+                display:block;
+            }
+        }
+
+        >li {
+            list-style: none;
+
+            >a {
+                position: relative;
+                color: $color-word;
+                font-weight: bold;
+                margin-bottom: .5em;
+                display:block;
+                border-bottom: 1px dotted #ccc;
+                padding:0 0 .5em 1em;
+                &:before {
+                    content: "";
+                    position: absolute;
+                    top: .4em;
+                    left: 0;
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                    border-width: 4px 0 4px 7px;
+                    border-color: transparent transparent transparent lighten($primaryColor, 10);
+                }
+            }
+
+            >ul {
+                >li {
+                    list-style: none;
+
+                    >a {
+                        position: relative;
+
+                        &:before {
+                            content: "";
+                            position: absolute;
+                            width: 4px;
+                            height: 4px;
+                            transform: rotate(45deg);
+                            border: 2px solid $secondaryColor;
+                            border-left: none;
+                            border-bottom: none;
+                            top: 1em;
+                            left: -1em;
+                        }
+                    }
+
+                    >ul {
+                        >li {
+                            list-style-type: disc;
+
+                            >a {
+                                color: #333;
+                            }
+
+                            >ul {
+                                >li {
+                                    list-style-type: circle;
+
+                                    >a {
+                                        color: $third-color;
+                                    }
+
+                                    >ul {
+                                        >li {
+                                            list-style-type: disc;
+
+                                            >a {
+                                                color: #333;
+                                            }
+
+                                            >ul {
+                                                >li {
+                                                    list-style-type: square;
+
+                                                    >a {
+                                                        color: $fourth-color;
+                                                    }
+
+                                                    >ul {
+                                                        >li {
+                                                            list-style-type: square;
+
+                                                            >a {
+                                                                color: $fourth-color;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+
+                            }
+                        }
+                    }
+                }
+
+
+
+            }
+
+
+        }
+    }
+
+}
