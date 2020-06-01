@@ -69,6 +69,7 @@ body {
         padding-left: 45px;
         color:darken($primaryColor, 15);
         border-bottom: 3px solid rgba($primaryColor, .3);
+        font-size: 1.8125em;
     }
     .title{
         position:relative;
@@ -83,5 +84,8 @@ body {
             background: url(../images/icon_title.svg) no-repeat;
             background-size:contain;
         }
+    }
+    h3{
+        font-size:1.5em;
     }
 }

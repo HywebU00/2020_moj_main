@@ -278,6 +278,13 @@ form {
             width: auto;
         }
     }
+    button, input[type="button"]{
+        &.form_btn{
+            background: $form-btn;
+            border:1px solid darken($form-btn, 10);
+        }
+    }
+
 }
 //---------------------------------------------下拉選單--------//
 label,
