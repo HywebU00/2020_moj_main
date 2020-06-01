@@ -47,6 +47,12 @@ body {
             position:relative;
         }
     }
+    >section{
+        padding: 20px 0;
+        &:first-of-type{
+            padding-top:0;
+        }
+    }
 }
 ////////////////////////////////////////////////////////////
 // 為了與首頁區隔，請在內頁加上innerpage ClassName
@@ -57,5 +63,25 @@ body {
     }
     >.container {
         @include gutter(); //gutter 代表左右要留白
+    }
+    h2.title{
+        text-align: left;
+        padding-left: 45px;
+        color:darken($primaryColor, 15);
+        border-bottom: 3px solid rgba($primaryColor, .3);
+    }
+    .title{
+        position:relative;
+
+        &:before{
+            content:"";
+            position:absolute;
+            left:0;
+            top:.25em;
+            width: 40px;
+            height:40px;
+            background: url(../images/icon_title.svg) no-repeat;
+            background-size:contain;
+        }
     }
 }

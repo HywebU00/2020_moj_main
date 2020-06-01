@@ -15,6 +15,7 @@ div.function {
     margin: .5em 0;
     ul {
         @include li-reset;
+        float:right;
         li {
             display: block;
             float: left;
@@ -33,6 +34,9 @@ div.function {
                     background: darken($aHover, 0);
                     border-color: darken($aHover, 0);
                 }
+            }
+            &.back{
+
             }
             // 回上一頁
             &.icon_back {

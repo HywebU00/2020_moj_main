@@ -473,7 +473,7 @@ div.tag {
 
     ol,
     ul {
-        counter-reset: counter;
+        //counter-reset: counter;
         list-style-type: none;
         padding: 0;
         margin-left: 1em;
@@ -489,7 +489,7 @@ div.tag {
         border-bottom: 1px solid #EEE;
 
         a {
-            padding: .2em 0px .2em 35px;
+            padding: .2em 0px .2em 1em;
             position: relative;
             height: auto;
             line-height: 1.45em;
@@ -497,13 +497,16 @@ div.tag {
             @include aSetting_nocolor;
 
             &:before {
-                position: absolute; // outline: 1px solid red;
-                top: 5px;
-                left: 0px;
+                position: absolute;
+                top: .6em;
+                left: .2em;
                 text-align: right;
                 width: 30px;
-                counter-increment: counter;
-                content: counters(counter, ".") " . ";
+                width: 6px;
+                height: 6px;
+                border-radius: 50%;
+                background: #999;
+                content: "";
             }
         }
     }
