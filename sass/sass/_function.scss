@@ -204,5 +204,10 @@ div.function {
         text-align: right;
         padding:.5em 0;
         margin-bottom: 1em;
+        font-size:1.125em;
+        color:#999;
+        time{
+            color:$color-purple;
+        }
     }
 }

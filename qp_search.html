@@ -281,321 +281,42 @@
                 <div class="breadcrumb">
                     <ul>
                         <li><a href="#">首頁</a></li>
-                        <li><a href="#">節點</a></li>
                         <li>節點</li>
                     </ul>
                 </div>
                 <!-- h2節點 -->
-                <h2 class="title">節點標題</h2>
-                <!-- function功能區塊 -->
-                <div class="function">
-                    <ul>
-                        <li class="back"><a href="#">回上一頁</a></li>
-                    </ul>
-                </div>
-                <div class="pagination">
-                    <ul class="page">
-                        <li class="first"><a href="#" title="第一頁">第一頁 </a></li>
-                        <li class="prev"><a href="#" title="回上一頁">回上一頁 </a></li>
-                        <li class="active"><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">5</a></li>
-                        <li><a href="#">6</a></li>
-                        <li><a href="#">7</a></li>
-                        <li><a href="#">8</a></li>
-                        <li><a href="#">9</a></li>
-                        <li><a href="#">10</a></li>
-                        <li class="next"><a href="#" title="下一頁">下一頁 </a></li>
-                        <li class="last"><a href="#" title="最後一頁">最後一頁 </a></li>
-                    </ul>
-                    <form action="" class="form_inline">
-                        <div class="total"> 共<span>308</span>筆資料，第<span>1/18</span>頁，每頁顯示
-                            <select name="" id="">
-                                <option value="">20</option>
-                                <option value="">40</option>
-                                <option value="">60</option>
-                            </select> 筆，
-                            <input type="button" class="btn" value="確定">
+                <h2 class="title">陳情處理進度查詢</h2>
+                <!-- QP Start -->
+                <section class="qp">
+                    <form action="" class="form_grid">
+                        <div class="form_grp">
+                            <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>陳情信件流水編號：</label>
+                            <div class="form_content">
+                                <input type="text" id="" value="" placeholder="請輸入陳情信件流水編號">
+                            </div>
+                        </div>
+                        <div class="form_grp">
+                            <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>E-mail：</label>
+                            <div class="form_content">
+                                <input name="" id="" type="text" placeholder="請輸入您陳情時所填寫的電子郵件">
+                            </div>
+                        </div>
+                        <div class="form_grp">
+                            <label class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>驗證碼：</label>
+                            <div class="form_content">
+                                <img src="images/basic/captcha.gif" alt="" class="captcha">
+                                <input type="text" id="" value="">
+                                <input name="" type="button" class="btn form_btn" value="重新產生">
+                                <input name="" type="button" class="btn form_btn" value="語音播放">
+                            </div>
+                        </div>
+                        <div class="btn_grp">
+                            <input name="" type="reset" value="清除">
+                            <input name="Search" type="submit" value="送出">
                         </div>
                     </form>
-                </div>
-                <!-- LP Start -->
-                <section class="lp">
-                    <!-- 影音列表 -->
-                    <div class="vedio">
-                        <ul>
-                            <li>
-                                <div class="thumbnail">
-                                    <a href="#">
-                                        <div class="img-container">
-                                            <!-- 此範例為4:3比例 -->
-                                            <picture>
-                                                <source media="(min-width: 1200px)" data-srcset="images/demo/01.jpg">
-                                                <source media="(min-width: 992px)" data-srcset="images/demo/01.jpg">
-                                                <source media="(min-width: 576px)" data-srcset="images/demo/01.jpg">
-                                                <source media="(max-width: 575px)" data-srcset="images/demo/01.jpg">
-                                                <img data-src="images/demo/01.jpg" class="lazy">
-                                                <noscript><img src="images/demo/01.jpg"></noscript>
-                                            </picture>
-                                        </div>
-                                        <div class="caption">
-                                            <h3>影片標題</h3>
-                                        </div>
-                                    </a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="thumbnail">
-                                    <a href="#">
-                                        <div class="img-container">
-                                            <!-- 此範例為4:3比例 -->
-                                            <picture>
-                                                <source media="(min-width: 1200px)" data-srcset="images/demo/02.jpg">
-                                                <source media="(min-width: 992px)" data-srcset="images/demo/02.jpg">
-                                                <source media="(min-width: 576px)" data-srcset="images/demo/02.jpg">
-                                                <source media="(max-width: 575px)" data-srcset="images/demo/02.jpg">
-                                                <img data-src="images/demo/02.jpg" class="lazy">
-                                                <noscript><img src="images/demo/02.jpg"></noscript>
-                                            </picture>
-                                        </div>
-                                        <div class="caption">
-                                            <h3>影片標題</h3>
-                                        </div>
-                                    </a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="thumbnail">
-                                    <a href="#">
-                                        <div class="img-container">
-                                            <!-- 此範例為4:3比例 -->
-                                            <picture>
-                                                <source media="(min-width: 1200px)" data-srcset="images/demo/03.jpg">
-                                                <source media="(min-width: 992px)" data-srcset="images/demo/03.jpg">
-                                                <source media="(min-width: 576px)" data-srcset="images/demo/03.jpg">
-                                                <source media="(max-width: 575px)" data-srcset="images/demo/03.jpg">
-                                                <img data-src="images/demo/03.jpg" class="lazy">
-                                                <noscript><img src="images/demo/03.jpg"></noscript>
-                                            </picture>
-                                        </div>
-                                        <div class="caption">
-                                            <h3>影片標題</h3>
-                                        </div>
-                                    </a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="thumbnail">
-                                    <a href="#">
-                                        <div class="img-container">
-                                            <!-- 此範例為4:3比例 -->
-                                            <picture>
-                                                <source media="(min-width: 1200px)" data-srcset="images/demo/04.jpg">
-                                                <source media="(min-width: 992px)" data-srcset="images/demo/04.jpg">
-                                                <source media="(min-width: 576px)" data-srcset="images/demo/04.jpg">
-                                                <source media="(max-width: 575px)" data-srcset="images/demo/04.jpg">
-                                                <img data-src="images/demo/04.jpg" class="lazy">
-                                                <noscript><img src="images/demo/04.jpg"></noscript>
-                                            </picture>
-                                        </div>
-                                        <div class="caption">
-                                            <h3>影片標題</h3>
-                                        </div>
-                                    </a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="thumbnail">
-                                    <a href="#">
-                                        <div class="img-container">
-                                            <!-- 此範例為4:3比例 -->
-                                            <picture>
-                                                <source media="(min-width: 1200px)" data-srcset="images/demo/05.jpg">
-                                                <source media="(min-width: 992px)" data-srcset="images/demo/05.jpg">
-                                                <source media="(min-width: 576px)" data-srcset="images/demo/05.jpg">
-                                                <source media="(max-width: 575px)" data-srcset="images/demo/05.jpg">
-                                                <img data-src="images/demo/05.jpg" class="lazy">
-                                                <noscript><img src="images/demo/05.jpg"></noscript>
-                                            </picture>
-                                        </div>
-                                        <div class="caption">
-                                            <h3>影片標題</h3>
-                                        </div>
-                                    </a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="thumbnail">
-                                    <a href="#">
-                                        <div class="img-container">
-                                            <!-- 此範例為4:3比例 -->
-                                            <picture>
-                                                <source media="(min-width: 1200px)" data-srcset="images/demo/06.jpg">
-                                                <source media="(min-width: 992px)" data-srcset="images/demo/06.jpg">
-                                                <source media="(min-width: 576px)" data-srcset="images/demo/06.jpg">
-                                                <source media="(max-width: 575px)" data-srcset="images/demo/06.jpg">
-                                                <img data-src="images/demo/06.jpg" class="lazy">
-                                                <noscript><img src="images/demo/06.jpg"></noscript>
-                                            </picture>
-                                        </div>
-                                        <div class="caption">
-                                            <h3>影片標題</h3>
-                                        </div>
-                                    </a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="thumbnail">
-                                    <a href="#">
-                                        <div class="img-container">
-                                            <!-- 此範例為4:3比例 -->
-                                            <picture>
-                                                <source media="(min-width: 1200px)" data-srcset="images/demo/07.jpg">
-                                                <source media="(min-width: 992px)" data-srcset="images/demo/07.jpg">
-                                                <source media="(min-width: 576px)" data-srcset="images/demo/07.jpg">
-                                                <source media="(max-width: 575px)" data-srcset="images/demo/07.jpg">
-                                                <img data-src="images/demo/07.jpg" class="lazy">
-                                                <noscript><img src="images/demo/07.jpg"></noscript>
-                                            </picture>
-                                        </div>
-                                        <div class="caption">
-                                            <h3>影片標題</h3>
-                                        </div>
-                                    </a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="thumbnail">
-                                    <a href="#">
-                                        <div class="img-container">
-                                            <!-- 此範例為4:3比例 -->
-                                            <picture>
-                                                <source media="(min-width: 1200px)" data-srcset="images/demo/08.jpg">
-                                                <source media="(min-width: 992px)" data-srcset="images/demo/08.jpg">
-                                                <source media="(min-width: 576px)" data-srcset="images/demo/08.jpg">
-                                                <source media="(max-width: 575px)" data-srcset="images/demo/08.jpg">
-                                                <img data-src="images/demo/08.jpg" class="lazy">
-                                                <noscript><img src="images/demo/08.jpg"></noscript>
-                                            </picture>
-                                        </div>
-                                        <div class="caption">
-                                            <h3>影片標題</h3>
-                                        </div>
-                                    </a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="thumbnail">
-                                    <a href="#">
-                                        <div class="img-container">
-                                            <!-- 此範例為4:3比例 -->
-                                            <picture>
-                                                <source media="(min-width: 1200px)" data-srcset="images/demo/09.jpg">
-                                                <source media="(min-width: 992px)" data-srcset="images/demo/09.jpg">
-                                                <source media="(min-width: 576px)" data-srcset="images/demo/09.jpg">
-                                                <source media="(max-width: 575px)" data-srcset="images/demo/09.jpg">
-                                                <img data-src="images/demo/09.jpg" class="lazy">
-                                                <noscript><img src="images/demo/09.jpg"></noscript>
-                                            </picture>
-                                        </div>
-                                        <div class="caption">
-                                            <h3>影片標題</h3>
-                                        </div>
-                                    </a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="thumbnail">
-                                    <a href="#">
-                                        <div class="img-container">
-                                            <!-- 此範例為4:3比例 -->
-                                            <picture>
-                                                <source media="(min-width: 1200px)" data-srcset="images/demo/10.jpg">
-                                                <source media="(min-width: 992px)" data-srcset="images/demo/10.jpg">
-                                                <source media="(min-width: 576px)" data-srcset="images/demo/10.jpg">
-                                                <source media="(max-width: 575px)" data-srcset="images/demo/10.jpg">
-                                                <img data-src="images/demo/10.jpg" class="lazy">
-                                                <noscript><img src="images/demo/10.jpg"></noscript>
-                                            </picture>
-                                        </div>
-                                        <div class="caption">
-                                            <h3>影片標題</h3>
-                                        </div>
-                                    </a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="thumbnail">
-                                    <a href="#">
-                                        <div class="img-container">
-                                            <!-- 此範例為4:3比例 -->
-                                            <picture>
-                                                <source media="(min-width: 1200px)" data-srcset="images/demo/11.jpg">
-                                                <source media="(min-width: 992px)" data-srcset="images/demo/11.jpg">
-                                                <source media="(min-width: 576px)" data-srcset="images/demo/11.jpg">
-                                                <source media="(max-width: 575px)" data-srcset="images/demo/11.jpg">
-                                                <img data-src="images/demo/11.jpg" class="lazy">
-                                                <noscript><img src="images/demo/11.jpg"></noscript>
-                                            </picture>
-                                        </div>
-                                        <div class="caption">
-                                            <h3>影片標題</h3>
-                                        </div>
-                                    </a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="thumbnail">
-                                    <a href="#">
-                                        <div class="img-container">
-                                            <!-- 此範例為4:3比例 -->
-                                            <picture>
-                                                <source media="(min-width: 1200px)" data-srcset="images/demo/12.jpg">
-                                                <source media="(min-width: 992px)" data-srcset="images/demo/12.jpg">
-                                                <source media="(min-width: 576px)" data-srcset="images/demo/12.jpg">
-                                                <source media="(max-width: 575px)" data-srcset="images/demo/12.jpg">
-                                                <img data-src="images/demo/12.jpg" class="lazy">
-                                                <noscript><img src="images/demo/12.jpg"></noscript>
-                                            </picture>
-                                        </div>
-                                        <div class="caption">
-                                            <h3>影片標題</h3>
-                                        </div>
-                                    </a>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
                 </section>
-                <!-- LP End -->
-                <!-- Pagination -->
-                <!-- Pagination -->
-                <div class="pagination">
-                    <ul class="page">
-                        <li class="first"><a href="#" title="第一頁">第一頁 </a></li>
-                        <li class="prev"><a href="#" title="回上一頁">回上一頁 </a></li>
-                        <li class="active"><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">5</a></li>
-                        <li><a href="#">6</a></li>
-                        <li><a href="#">7</a></li>
-                        <li><a href="#">8</a></li>
-                        <li><a href="#">9</a></li>
-                        <li><a href="#">10</a></li>
-                        <li class="next"><a href="#" title="下一頁">下一頁 </a></li>
-                        <li class="last"><a href="#" title="最後一頁">最後一頁 </a></li>
-                    </ul>
-                </div>
-                <div class="function">
-                    <ul>
-                        <li class="home"><a href="index.html">回首頁</a></li>
-                        <li class="back"><a href="javascript:history.back()">回上一頁</a></li>
-                    </ul>
-                </div>
+                <!-- QP End -->
             </div>
         </div>
         <!-- fatfooter Start -->

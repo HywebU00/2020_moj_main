@@ -297,6 +297,11 @@
             text-shadow: none;
             background: $secondaryColor;
             border-color: lighten($secondaryColor, 10);
+            &:hover,
+            &:focus{
+                border-color: $secondaryColor!important;
+                background: lighten($secondaryColor, 10);
+            }
         }
     }
 

@@ -2,4 +2,11 @@
 	margin: 1em auto;
 	@include box-sizing;
 	padding:1em;
+  >p{
+    a{
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
 }
