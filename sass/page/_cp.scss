@@ -4,7 +4,7 @@
 h1.title,
 h2.title {
     line-height: 1.25em;
-    margin: .4em 0;
+    margin: 0 0 .4em 0;
 }
 
 .cp {
@@ -85,7 +85,7 @@ h2.title {
         position: relative;
         margin: 1em auto 2em;
         width: 80%;
-        max-width:600px;
+        max-width:800px;
         background: #000;
         @include aspect-ratio(16, 9);
         @include screen('mobile'){
@@ -113,19 +113,7 @@ h2.title {
         }
 
     }
-    .info2 {
-            margin:0;
-            padding:1em 0;
-            li {
-                display: inline-block;
-                padding-right:.5em;
 
-                span {
-                    color: darken($color-purple, 15);
-                }
-            }
-
-        }
 
     a {
         @include aSetting;
@@ -137,6 +125,20 @@ h2.title {
             }
         }
     }
+}
+
+.info2 {
+    margin:0;
+    padding:1em 0;
+    li {
+        display: inline-block;
+        padding-right:.5em;
+
+        span {
+            color: darken($color-purple, 10);
+        }
+    }
+
 }
 
 // 文章標籤
@@ -242,10 +244,10 @@ div.tag {
 
         .update,
         .file_view {
-            font-size: .813em;
-            color: #AAA;
+            font-size: .938åem;
+            color: #999;
             width: 120px;
-            padding-left: 35px;
+            padding-left: 1em;
             float: none;
             margin-top: 5px;
 

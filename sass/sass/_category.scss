@@ -11,11 +11,12 @@
         }
     }
     a {
-        @include gradient(#FFF, #DDD, vertical);
+        //@include gradient(#FFF, #DDD, vertical);
+        background: #efefef;
         border: 1px solid #CCC;
-        padding: .4em 1em;
+        padding: .25em 1em;
         display: block;
-        color: #333;
+        color: $primaryColor;
         @include box-sizing();
         border-radius:4px;
         &:hover,

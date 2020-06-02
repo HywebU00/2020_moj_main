@@ -296,6 +296,7 @@
             color:#000;
             text-shadow: none;
             background: $secondaryColor;
+            border-color: lighten($secondaryColor, 10);
         }
     }
 

@@ -48,6 +48,7 @@ $(function() {
     var _sidebar = $('.sidebar'),
         _search = $('.search'),
         _nav = $('.navigation'),
+        _uni = $('.units'),
         _sidebarClose = $('.sidebarClose'),
         _sidebarCtrl = $('.sidebarCtrl'),
         _overlay = $('.menu_overlay');
@@ -158,6 +159,7 @@ $(function() {
             hideSidebar();
             _body.removeClass('noscroll');
             _nav.prependTo('.header .container');
+            _uni.prependTo('.header .container');
             _search.appendTo('.header .container');
             _menu.appendTo('.header .container');
             _search.removeClass('m_search');

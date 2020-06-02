@@ -1,7 +1,7 @@
 .font_size {
     overflow: hidden;
-    display: inline-block;
-    text-align: center;
+    display: block;
+    text-align: right;
     span {
         display: inline-block;
         vertical-align: middle;
@@ -13,8 +13,8 @@
         vertical-align: middle;
         @include li-reset;
         li {
-            width: 40px;
-            height: 40px;
+            width: 36px;
+            height: 36px;
             font-size: 1em;
             float: left;
             display: block;
@@ -22,27 +22,28 @@
             a {
                 display: block;
                 text-align: center;
-                line-height: 40px;
-                border-radius: 50%;
-                background: #F1F1F1;
-                color: #333;
+                line-height: 36px;
+                border-radius: 5px;
+                background: $lightColor;
+                color: #fff;
+                font-size:.875em;
                 &:hover, &:focus {
-                    background: $aHover;
+                    background: darken($lightColor, 10);
                     color: #FFF;
                 }
                 &.active {
-                    background: #F1F1F1;
-                    &:hover, &:focus {
-                        background: $aHover;
-                        color: #FFF;
-                    }
+                    background: darken($lightColor, 10);
+                    // &:hover, &:focus {
+                    //     background: darken($lightColor, 10);
+                    //     color: #FFF;
+                    // }
                 }
-                &.small {
-                    font-size: .938em;
-                }
-                &.large {
-                    font-size: 1.125em;
-                }
+                // &.small {
+                //     font-size: .938em;
+                // }
+                // &.large {
+                //     font-size: 1.125em;
+                // }
             }
         }
     }
