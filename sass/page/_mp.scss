@@ -843,6 +843,66 @@
 
 .mp_info{
     padding: 20px 0;
+    &.EN{
+        .col{
+            .text_link{
+                li{
+                    a:hover{
+                        color: $color-orange2;
+                    }
+                }
+            }
+            &:nth-child(3n+1){
+                h2, a{
+                    color:$color-blue;
+                }
+                .text_link{
+                    a.more{
+                        border-color:$color-blue;
+                        &:hover{
+                            color:#fff;
+                        }
+                        &:before{
+                            background: $color-blue
+                        }
+                    }
+                }
+            }
+            &:nth-child(3n+2){
+                h2, a{
+                    color:$color-green;
+                }
+                .text_link{
+                    a.more{
+                        border-color:$color-green;
+                        &:hover{
+                            color:#fff;
+                        }
+                        &:before{
+                            background: $color-green;
+                        }
+                    }
+                }
+            }
+            &:nth-child(3n+3){
+                h2, a{
+                    color:$color-orange;
+                }
+                .text_link{
+                    a.more{
+                        border-color:$color-orange;
+                        &:hover{
+                            color:#fff;
+                        }
+                        &:before{
+                            background: $color-orange;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
 }
 
 
@@ -859,13 +919,33 @@
 
         li {
             display: inline-block;
-            //width: 150px;
-            //height: 53px;
-            //margin: 0px 15px 10px;
+            width: 165px;
+            height: 55px;
+            margin: 0px 15px 10px;
             padding:0 1em;
             box-sizing: border-box;
             text-align: center;
+            .img-container{
+                width: 165px;
+                height: 55px;
+                margin: 0px auto;
+                box-sizing: border-box;
+                img{
+                    border:1px solid $color-gray;
+                }
+            }
         }
+    }
+}
+
+.ad_banner2{
+    padding:50px 0!important;
+    .col{
+        @include gutter;
+    }
+    .img-container{
+        @include aspect-ratio(5, 1);
+        background: transparent;
     }
 }
 
@@ -933,7 +1013,6 @@
                     -webkit-line-clamp: 2;
                     overflow: hidden;
                     height: 46px;
-
                     &:hover {
                         color: $aHover;
                     }
