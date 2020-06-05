@@ -846,6 +846,15 @@
     &.EN{
         .col{
             .text_link{
+                h2{
+                    min-height: 5em;
+                    @include screen('tablet'){
+                        min-height: 6.5em;
+                    }
+                    @include screen('mobile'){
+                        min-height: auto;
+                    }
+                }
                 li{
                     a:hover{
                         color: $color-orange2;
