@@ -948,13 +948,17 @@
 }
 
 .ad_banner2{
-    padding:50px 0!important;
+    padding:2em 0!important;
     .col{
         @include gutter;
+        padding:2em;
     }
     .img-container{
         @include aspect-ratio(5, 1);
         background: transparent;
+    }
+    a.more{
+        margin-top:2em;
     }
 }
 
