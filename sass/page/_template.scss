@@ -70,10 +70,7 @@ body {
         color:darken($primaryColor, 15);
         border-bottom: 3px solid rgba($primaryColor, .3);
         font-size: 2em;
-    }
-    .title{
         position:relative;
-
         &:before{
             content:"";
             position:absolute;
@@ -85,6 +82,7 @@ body {
             background-size:contain;
         }
     }
+
     h3{
         font-size:1.5em;
     }
