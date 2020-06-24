@@ -302,6 +302,11 @@
                 border-color: $secondaryColor!important;
                 background: lighten($secondaryColor, 10);
             }
+            &:focus{
+                box-shadow: 0px 0px 0px 3px #07acad;
+                outline: none;
+                border: none;
+            }
         }
     }
 
@@ -555,7 +560,9 @@
             top: 20px;
             right: 15px;
         }
-
+        a{
+            display:block;
+        }
         img {
             width: 40px;
             height: 40px;

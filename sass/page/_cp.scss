@@ -87,12 +87,14 @@ h2.title {
             }
         }
     }
-
+    .video_info{
+        //max-width:970px;
+    }
     .video-container {
         position: relative;
         margin: 1em auto 2em;
-        width: 80%;
-        max-width:800px;
+        width: 100%;
+        //max-width:970px;
         background: #000;
         @include aspect-ratio(16, 9);
         @include screen('mobile'){
