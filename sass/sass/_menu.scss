@@ -20,6 +20,9 @@
         text-align: center;
         margin: 0;
         padding: 0;
+        @include screen('tablet'){
+            text-align: left;
+        }
         // 第一層選單樣式
         >li {
             display: inline-block;
@@ -193,6 +196,7 @@
                 color: #222;
                 text-decoration: none;
                 transition: .4s ease-out;
+                text-align: left;
             }
             ul {
                 ul {

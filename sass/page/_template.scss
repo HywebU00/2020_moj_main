@@ -52,6 +52,9 @@ body {
         &:first-of-type{
             padding-top:0;
         }
+        @include screen('mobile'){
+            padding:0;
+        }
     }
 }
 ////////////////////////////////////////////////////////////

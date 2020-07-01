@@ -514,6 +514,11 @@
             padding: 0;
             opacity: .8;
             filter: invert(1);
+            &:hover,
+            &:focus{
+                background:transparent url(../images/basic/icon_sitemap.png) no-repeat center center;
+                background-size: 30px;
+            }
         }
 
         @media (max-width:320px) {
