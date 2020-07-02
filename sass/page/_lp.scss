@@ -194,3 +194,11 @@
         }
     }
 }
+.advance_block{
+    button{
+        &:focus{
+            outline:none;
+            box-shadow: 0 0px 0px 1px $secondaryColor inset;
+        }
+    }
+}
