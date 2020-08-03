@@ -527,7 +527,11 @@
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
+                .tag{
+                    position:absolute;
+                    right:10px;
 
+                }
                 &:before {
                     position: absolute;
                     top: 1em;
