@@ -29,3 +29,11 @@
         @include aSetting_nocolor;
     }
 }
+
+html:lang(en){
+    .breadcrumb{
+        &:before{
+            content:"Here:";
+        }
+    }
+}
