@@ -113,6 +113,9 @@
 .i_global {
     @include hyui_icon('icon_global');
 }
+.i_tag {
+    @include hyui_icon('icon_tag');
+}
 .i_trash {
     @include hyui_icon('icon_trash');
 }
