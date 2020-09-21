@@ -601,7 +601,27 @@
         padding: 0;
         float: none;
         overflow-y: auto;
-
+        //firefox scrollbar
+        scrollbar-color: #333;
+        scrollbar-width: thin;
+        //-webkit scrollbar
+        &::-webkit-scrollbar{
+            width: 6px;
+        }
+        &::-webkit-scrollbar-track {
+            background: rgba(0,0,0,.0); 
+        }
+        &::-webkit-scrollbar-thumb {
+            background: #333; 
+        }
+        //IE scrollbar
+        scrollbar-face-color:#333;
+        scrollbar-arrow-color:#333;
+        scrollbar-track-color:#000;
+        scrollbar-shadow-color:#333;
+        scrollbar-highlight-color:#000;
+        scrollbar-3dlight-color:#000;
+        scrollbar-darkshadow-Color:#000;
         >li {
             display: block;
             padding: 0;
