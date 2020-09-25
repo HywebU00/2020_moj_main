@@ -1294,14 +1294,14 @@ $('nav.units_block').hide();
 function openuni(){
   $('nav.units_block').css('top', '0px');
   $('nav.units_block').slideDown(600,'easeOutQuart');
-  $('body').addClass('noscroll');
+  //$('body').addClass('noscroll');
   $(this).hide();
 }
 function closeuni(){
   $('nav.units_block').fadeOut(400,function(){
     $(this).css('top', '-2000px');
   });
-  $('body').removeClass('noscroll');
+  //$('body').removeClass('noscroll');
 }
 $('nav.units_block .close,nav.units_block .overlay').click(function(event) {
   closeuni();

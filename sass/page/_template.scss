@@ -17,6 +17,7 @@ body {
 }
 // 最外圍預設為100%
 .wrapper {
+    position: relative;
     width: 100%;
     margin: 0px auto;
     @include screen('mobile') {

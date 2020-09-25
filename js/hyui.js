@@ -160,6 +160,7 @@ $(function() {
             _body.removeClass('noscroll');
             _nav.prependTo('.header .container');
             _uni.prependTo('.header .container');
+            $('.units_block').prependTo('.wrapper');
             _search.appendTo('.header .container');
             _menu.appendTo('.header .container');
             _search.removeClass('m_search');
