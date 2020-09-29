@@ -312,15 +312,39 @@
                         <li><a href="#" class="large">A+</a></li>
                     </ul>
                 </div>
-
                 <h2 class="title">節點名稱</h2>
                 <div class="publish_time">
                     <span>發布日期：</span><time>2019-01-01</time>
                 </div>
-
                 <!-- CP Start -->
                 <section class="cp">
                     <h3 class="title">資料標題名稱</h3>
+                    <form action="" method="post" name="form1" class="form_inline">
+                        <div class="form_grp">
+                            <label for="">請選擇所屬機關網站：</label>
+                            <select id="Llist_1" name="Llist_1">
+                                <option selected="selected" value="-">－－請　選　擇－－</option>
+                                <option value="http://www.tpk.moj.gov.tw/">法務部行政執行署</option>
+                                <option value="http://www.tpy.moj.gov.tw/">行政執行署臺北分署</option>
+                                <option value="http://www.pcy.moj.gov.tw/">行政執行署新北分署</option>
+                                <option value="http://www.tyy.moj.gov.tw/">行政執行署桃園分署</option>
+                                <option value="http://www.scy.moj.gov.tw/">行政執行署新竹分署</option>
+                                <option value="http://www.tcy.moj.gov.tw/">行政執行署臺中分署</option>
+                                <option value="http://www.chy.moj.gov.tw/">行政執行署彰化分署</option>
+                                <option value="http://www.cyy.moj.gov.tw/">行政執行署嘉義分署</option>
+                                <option value="http://www.tny.moj.gov.tw/">行政執行署臺南分署</option>
+                                <option value="http://www.ksy.moj.gov.tw/">行政執行署高雄分署</option>
+                                <option value="http://www.pty.moj.gov.tw/">行政執行署屏東分署</option>
+                                <option value="http://www.hly.moj.gov.tw/">行政執行署花蓮分署</option>
+                                <option value="http://www.ily.moj.gov.tw/">行政執行署宜蘭分署</option>
+                                <option value="http://www.sly.moj.gov.tw/">行政執行署士林分署</option>
+                            </select>
+                            <div class="btn_grp">
+                                <input type="button" value="送出" class="open_url_btn">
+                                <!-- <a href="" class="open_url_btn">送出</a> -->
+                            </div>
+                        </div>
+                    </form>
                     <div class="pic">
                         <!-- 此範例為4:3比例 -->
                         <picture>
@@ -656,4 +680,15 @@
     <script src="js/hyui.js"></script>
     <!-- 客製js -->
     <script src="js/customize.js"></script>
+    <script language="JavaScript">
+    let urlBtn = document.querySelector(".open_url_btn");
+    urlBtn.addEventListener("click", function(e) {
+        e.preventDefault();
+        let url = document.querySelector("#Llist_1").value;
+        if (url != "-") {
+            window.open(url);
+        }
+        return false;
+    });
+    </script>
 </body>
