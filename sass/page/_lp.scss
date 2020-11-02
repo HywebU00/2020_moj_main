@@ -5,7 +5,9 @@
                 @include aSetting_nocolor;
             }
 
-            &.date {
+            &.date,
+            &.num,
+            &.category  {
                 text-align: center;
                 color: #666;
                 white-space: nowrap;
@@ -14,16 +16,16 @@
                 }
             }
 
-            &.num,
-            &.category {
-                text-align: center;
-                color: #666;
-                margin: 0;
+            // &.num,
+            // &.category {
+            //     text-align: center;
+            //     color: #666;
+            //     margin: 0;
 
-                @include screen('mobile') {
-                    text-align: left;
-                }
-            }
+            //     @include screen('mobile') {
+            //         text-align: left;
+            //     }
+            // }
         }
     }
 
