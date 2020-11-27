@@ -6,6 +6,9 @@
     z-index: 99;
     @include gutter();
     //border-top: 1px solid #ccc;
+    @include screen('tablet'){
+        @include gutter(0);
+    }
     // 預設選單 ul
     clear: both;
     &:before{
@@ -105,11 +108,10 @@
                 padding: .6em 1.2em;
                 color: #FFF;
                 font-weight: bold;
-                //white-space: nowrap;
-                 @include screen('mobile'){
-                    word-wrap:break-word;
-                    white-space: normal;
-                 }
+                word-wrap:break-word;
+                 // @include screen('mobile'){
+                 //    word-wrap:break-word;
+                 // }
                 &:hover, &:focus {
                     background: $aHover;
                 }

@@ -38,7 +38,10 @@ $(function() {
         liHasChild_level1 = $('.menu ul').children('li.hasChild'),
         liHasChild_level2 = $('.menu ul ul').children('li.hasChild'),
         liHasChild_level3 = $('.menu ul ul ul').children('li.hasChild'),
-        subMenuWidth = liHasChild.first().children('ul').outerWidth();
+        subMenuWidth = liHasChild.first().children('ul').outerWidth(),
+        subMenu = liHasChild.find('ul');
+        //subMenuLengh = subMenu.first().children('li').length;
+
     /*-----------------------------------*/
     ////////////// 行動版選單切換////////////
     /*-----------------------------------*/
@@ -117,6 +120,7 @@ $(function() {
             _mArea.css({
                 'margin-left': _mArea.width() * -1 + 'px'
             });
+            subMenu.removeClass('twoColumn');
             liHasChild_level1.on({
                 mouseenter: function() {
                     $(this).children('ul').stop(true, true).slideDown('600', 'easeOutQuint');
@@ -167,10 +171,17 @@ $(function() {
             _search.show();
             search_mode = false;
             $('.language').find('ul').hide();
-            // 副選單滑出
+
+            //console.log(subMenuLengh);
+            // if($(subMenu).find('li').length > 10){
+            //     subMenu.addClass('twoColumn');
+            // }
+            
+            //副選單滑出
             liHasChild.on({
                 mouseenter: function() {
                     $(this).children('ul').stop(true, false).fadeIn();
+                    
                 },
                 mouseleave: function() {
                     $(this).parent().siblings('ul').hide();
@@ -178,7 +189,7 @@ $(function() {
                 }
             });
             liHasChild.off('click');
-            // 如果點在外面
+            //如果點在外面
             $(document).on('touchend click', function(e) {
                 var target = e.target;
                 if (!$(target).is('.menu li a')) {
