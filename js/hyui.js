@@ -172,10 +172,14 @@ $(function() {
             search_mode = false;
             $('.language').find('ul').hide();
 
-            //console.log(subMenuLengh);
-            // if($(subMenu).find('li').length > 10){
-            //     subMenu.addClass('twoColumn');
-            // }
+
+
+            $(subMenu).each(function () {
+                let b = $(this).children().length;
+                if (b > 10) {
+                  $(this).addClass("twoColumn");
+                }
+            });
             
             //副選單滑出
             liHasChild.on({
@@ -189,7 +193,7 @@ $(function() {
                 }
             });
             liHasChild.off('click');
-            //如果點在外面
+            // //如果點在外面
             $(document).on('touchend click', function(e) {
                 var target = e.target;
                 if (!$(target).is('.menu li a')) {

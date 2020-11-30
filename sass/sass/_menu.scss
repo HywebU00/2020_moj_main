@@ -83,14 +83,21 @@
             animation: showMenu .3s ease-out;
             ul {
                 top: 0;
-                left: 170px;
+                left: 250px;
                 animation: none;
-                background: rgba(0, 0, 0, 1);
+                background: $primaryColor;
             }
             &.twoColumn{
-                column-count: 2;
+                //column-count: 2;
                 width: 500px;
-                min-width: 500px; 
+                min-width: 500px;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap; 
+                max-height: 470px;
+                >li{
+                    width: 250px;
+                }
             }
         }
     }
@@ -132,7 +139,7 @@
                     content: '';
                     position: absolute;
                     right: 10px;
-                    top: 1.3em;
+                    top: 1em;
                     width: 6px;
                     height: 6px;
                     border: 2px solid #FFF;
