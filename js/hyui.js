@@ -174,12 +174,14 @@ $(function() {
 
 
 
-            $(subMenu).each(function () {
-                let b = $(this).children().length;
-                if (b > 10) {
-                  $(this).addClass("twoColumn");
-                }
-            });
+            // $(subMenu).each(function () {
+            //     let b = $(this).children().length;
+            //     if ( b > 8 && b <= 16) {
+            //         $(this).addClass("twoColumn");
+            //     }else if( b > 16){
+            //         $(this).addClass("threeColumn");
+            //     }
+            // });
             
             //副選單滑出
             liHasChild.on({
