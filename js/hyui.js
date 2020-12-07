@@ -34,6 +34,7 @@ $(function() {
     /*-----------------------------------*/
     var _menu = $('.menu');
     _menu.find('li').has('ul').addClass('hasChild');
+    _menu.find('li>ul>li').removeClass('hasChild');
     var _mh = _menu.height();
     var liHasChild = _menu.find('li.hasChild'),
         liHasChild_level1 = $('.menu ul').children('li.hasChild'),
@@ -147,9 +148,9 @@ $(function() {
                 $(this).children('ul').stop(true, true).slideDown('600', 'easeOutQuint');
             });
             // 第三層選單
-            liHasChild_level3.off().on('click', function(e) {
-                e.preventDefault();
-            });
+            // liHasChild_level3.off().on('click', function(e) {
+            //     e.preventDefault();
+            // });
             //手機版第第一層點了不會進入內頁，拿掉第一層的連結無作用
             liHasChild.children('a').off().on('click', function(e) {
                 e.preventDefault();
