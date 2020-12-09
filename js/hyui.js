@@ -122,7 +122,7 @@ $(function() {
             _mArea.css({
                 'margin-left': _mArea.width() * -1 + 'px'
             });
-            subMenu.removeClass('twoColumn');
+            //subMenu.removeClass('twoColumn');
             liHasChild_level1.on({
                 mouseenter: function() {
                     $(this).children('ul').stop(true, true).slideDown('600', 'easeOutQuint');
