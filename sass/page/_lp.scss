@@ -147,6 +147,11 @@
                 width: 100%;
                 max-width: 90%;
                 margin: 0 auto 1em;
+                .img-container{
+                    img{
+                        object-fit: contain;
+                    }
+                }
             }
         }
     }
@@ -203,4 +208,7 @@
             box-shadow: 0 0px 0px 1px $secondaryColor inset;
         }
     }
+}
+.ui-widget-content{
+    z-index: 100 !important;
 }
