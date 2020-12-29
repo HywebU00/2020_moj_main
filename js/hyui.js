@@ -42,7 +42,7 @@ $(function() {
         liHasChild_level3 = $('.menu ul ul ul').children('li.hasChild'),
         subMenuWidth = liHasChild.first().children('ul').outerWidth(),
         subMenu = liHasChild.find('ul');
-        //subMenuLengh = subMenu.first().children('li').length;
+    //subMenuLengh = subMenu.first().children('li').length;
 
     /*-----------------------------------*/
     ////////////// 行動版選單切換////////////
@@ -184,12 +184,12 @@ $(function() {
             //         $(this).addClass("threeColumn");
             //     }
             // });
-            
+
             //副選單滑出
             liHasChild.on({
                 mouseenter: function() {
                     $(this).children('ul').stop(true, false).fadeIn();
-                    
+
                 },
                 mouseleave: function() {
                     $(this).parent().siblings('ul').hide();
@@ -598,7 +598,7 @@ $(function() {
         }
         // alt+C 主要內容區
         if (e.altKey && e.keyCode == 67) {
-            $('html, body').stop(true, true).animate({ scrollTop: $('.main').find('.accesskey').offset().top - _mh}, 800, 'easeOutExpo');
+            $('html, body').stop(true, true).animate({ scrollTop: $('.main').find('.accesskey').offset().top - _mh }, 800, 'easeOutExpo');
             $('.main').find('.accesskey').focus();
         }
         // alt+B footer
@@ -735,4 +735,38 @@ $(function() {
             threshold: 0
         });
     }
+    /*-----------------------------------*/
+    ////////////////unimenu////////////////
+    /*-----------------------------------*/
+    $('nav.units_block').hide();
+
+    function openuni() {
+        $('nav.units_block').css('top', '0px');
+        $('nav.units_block').slideDown(600, 'easeOutQuart');
+        $(this).hide();
+        if (ww < wwSmall) {
+            $('.header').css('position', 'relative');
+        }
+    }
+
+    function closeuni() {
+        $('nav.units_block').fadeOut(400, function() {
+            $(this).css('top', '-2000px');
+        });
+        if (ww < wwSmall) {
+            $('.header').css('position', 'fixed');
+        }
+    }
+    $('nav.units_block .close,nav.units_block .overlay').click(function(event) {
+        closeuni();
+    });
+    $('nav.units_block>ul>li:last-child>ul>li:last-child a').focusout(function() {
+        closeuni();
+    });
+
+
+    $('.units').click(function(event) {
+        openuni();
+    });
+
 });

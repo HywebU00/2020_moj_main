@@ -1287,30 +1287,3 @@ $('.col-6-6 .col .service ul').slick({
         }
     }]
 });
-/*-----------------------------------*/
-////////////////unimenu////////////////
-/*-----------------------------------*/
-$('nav.units_block').hide();
-function openuni(){
-  $('nav.units_block').css('top', '0px');
-  $('nav.units_block').slideDown(600,'easeOutQuart');
-  //$('body').addClass('noscroll');
-  $(this).hide();
-}
-function closeuni(){
-  $('nav.units_block').fadeOut(400,function(){
-    $(this).css('top', '-2000px');
-  });
-  //$('body').removeClass('noscroll');
-}
-$('nav.units_block .close,nav.units_block .overlay').click(function(event) {
-  closeuni();
-});
-$('nav.units_block>ul>li:last-child>ul>li:last-child a').focusout(function() {
-  closeuni();
-});
-
-
-$('.units').click(function(event) {
- openuni();
-});
