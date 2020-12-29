@@ -745,7 +745,7 @@ $(function() {
         $('nav.units_block').slideDown(600, 'easeOutQuart');
         $(this).hide();
         if (ww < wwSmall) {
-            $('.header').css('position', 'relative');
+            $('body').addClass('noscroll');
         }
     }
 
@@ -754,7 +754,7 @@ $(function() {
             $(this).css('top', '-2000px');
         });
         if (ww < wwSmall) {
-            $('.header').css('position', 'fixed');
+            $('body').removeClass('noscroll'); 
         }
     }
     $('nav.units_block .close,nav.units_block .overlay').click(function(event) {
