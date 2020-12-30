@@ -18,7 +18,7 @@ $(function() {
     // 首頁輪播
     $('.mpSlider').slick({
         mobileFirst: true,
-        dots: true,
+        dots: false,
         arrow: true,
         infinite: true,
         speed: 500,
@@ -26,7 +26,13 @@ $(function() {
         fade: true,
         lazyLoaded: true,
         lazyLoad: 'ondemand',
-        ease: 'ease'
+        ease: 'ease',
+        responsive: [{
+            breakpoint: 768,
+            settings: {
+                dots: true
+            }
+        }]
     });
     // 廣告輪播
     $('.adSlider').slick({
