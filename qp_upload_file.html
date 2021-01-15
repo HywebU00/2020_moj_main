@@ -286,56 +286,20 @@
                     </ul>
                 </div>
                 <!-- h2節點 -->
-                <h2 class="title">部長信箱</h2>
+                <h2 class="title">檔案上傳</h2>
                 <!-- QP Start -->
                 <section class="qp">
-                    <p>如果您有任何問題，您可以透過本信箱，直接向我們反映，我們將儘快並妥慎處理，並竭誠歡迎您的建言，謝謝！
-                        <br /><a href="#">
-                            <font color="red">處理流程說明 </font>
-                        </a>&nbsp;&nbsp;
-                        <a href="#">
-                            <font color="red"> 陳情處理進度查詢</font>
-                        </a>
-                    </p>
-                    <p>註:<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>為必填(選)欄位, 不能為空白。</p>
                     <form action="" class="form_grid">
                         <div class="form_grp">
-                            <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>您的真實姓名：</label>
+                            <label for="" class="form_title">檔案上傳：</label>
                             <div class="form_content">
-                                <input type="text" id="" value="" placeholder="請輸入您的真實姓名">
-                            </div>
-                        </div>
-                        <div class="form_grp">
-                            <label for="password" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>您的聯絡電話：</label>
-                            <div class="form_content">
-                                <input name="" id="" type="text" placeholder="請輸入您的聯絡電話">
-                                <span>(電話格式：02-23456789 或 0912-345678)</span>
-                            </div>
-                        </div>
-                        <div class="form_grp">
-                            <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>您的電子信箱：</label>
-                            <div class="form_content">
-                                <input name="" id="" type="text" placeholder="請輸入您的電子信箱">
-                            </div>
-                        </div>
-                        <div class="form_grp">
-                            <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>您的聯絡地址：</label>
-                            <div class="form_content">
-                                <input type="text" id="" value="" placeholder="請輸入您的聯絡地址">
-                            </div>
-                        </div>
-                        <div class="form_grp">
-                            <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>您的意見主旨：</label>
-                            <div class="form_content">
-                                <input type="text" id="" value="" placeholder="請輸入您的意見主旨">
-                                <span>(主旨輸入請於50個中文字以內)</span>
-                            </div>
-                        </div>
-                        <div class="form_grp">
-                            <label for="" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>您的意見內容：</label>
-                            <div class="form_content">
-                                <textarea name="" id="" cols="30" rows="70" placeholder="內容輸入請於3000個中文字以內"></textarea>
-                                <span>(主旨輸入請於300個中文字以內)</span>
+                                <div class="upload_grp">
+                                    <input class="upload_file" type="text" readonly>
+                                    <div class="upload_btn">
+                                        <span>上傳檔案</span>
+                                        <input type="file" class="check_file"/>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="form_grp">
@@ -343,25 +307,33 @@
                             <div class="form_content">
                                 <div class="upload_grp">
                                     <input class="upload_file" type="text" readonly>
-                                    <!-- <div class="upload_btn"> -->
-                                    <!-- <span>上傳檔案</span> -->
-                                    <input type="button" class="check_file" value="上傳檔案" />
-                                    <!-- </div> -->
+                                    <div class="upload_btn">
+                                        <span>上傳檔案</span>
+                                        <input type="file" class="check_file"/>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="form_grp">
-                            <label class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>驗證碼：</label>
+                            <label for="" class="form_title">檔案上傳：</label>
                             <div class="form_content">
-                                <img src="images/basic/captcha.gif" alt="" class="captcha">
-                                <input type="text" id="" value="">
-                                <input name="" type="button" class="btn form_btn" value="重新產生">
-                                <input name="" type="button" class="btn form_btn" value="語音播放">
+                                <div class="upload_grp">
+                                    <input class="upload_file" type="text" readonly>
+                                    <div class="upload_btn">
+                                        <span>上傳檔案</span>
+                                        <input type="file" class="check_file"/>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+                        <p class="attention">
+                            <font color="red">
+                                (本系統至多可上傳3個附件檔案，總容量10MB，檔案類型須符合：txt、doc、docx、xls、xlsx、ppt、pptx、pdf、bmp、gif、jpg、png、tif、tiff、odt、odp、ods。)
+                            </font>
+                        </p>
                         <div class="btn_grp">
-                            <input name="" type="reset" value="清除">
-                            <input name="Search" type="submit" value="送出">
+                            <input name="" type="reset" value="重新選擇">
+                            <input name="Search" type="submit" value="送出資料">
                         </div>
                     </form>
                 </section>
