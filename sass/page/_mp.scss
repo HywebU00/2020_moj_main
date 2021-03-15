@@ -552,7 +552,12 @@
 .single_photo {
     text-align: left;
     //@include gutter();
-
+    >a{
+        display: block;
+        &:focus{
+            box-shadow: 0 0px 0px 2px $secondaryColor;
+        }
+    }
     .img-container {
         @include aspect-ratio(4, 3);
 
@@ -657,6 +662,9 @@
     text-align: left;
     >a{
         display:block;
+        &:focus{
+            box-shadow: 0 0px 0px 2px $secondaryColor;
+        }
     }
     .youtube {
         @include aspect-ratio(4, 3);
