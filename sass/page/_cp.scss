@@ -17,8 +17,12 @@ h2.title {
     p{
         >img{
             max-width: 600px;
+            height: auto;
             margin: 0 auto;
             display: block;
+            @include screen('mobile'){
+                max-width: 100%;
+            }
         }
     }
     .pic {
