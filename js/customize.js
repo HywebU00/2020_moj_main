@@ -50,7 +50,7 @@ $(function() {
         responsive: [{
             breakpoint: 1200,
             settings: {
-                slidesToShow: 5,
+                slidesToShow: 6,
                 slidesToScroll: 1,
                 arrows: true
             }
