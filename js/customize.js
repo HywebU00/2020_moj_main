@@ -14,24 +14,7 @@ $(function() {
             }
         });
         $(this).stop(true, true).toggleClass('close');
-    });
-    // var weblang = $('html').attr('lang');
-    // if (weblang.substring(0, 2) == 'zh') {
-    //      console.log("中文");
-    //     $('.slick-prev').attr('title', '上一筆');
-    //     $('.slick-next').attr('title', '下一筆');
-    //     $('.slick-prev').html('上一筆');
-    //     $('.slick-next').html('下一筆');
-    //     $('.slick-prev').removeAttr('aria-label');
-    //     $('.slick-next').removeAttr('aria-label');
-    // } else if (weblang.substring(0, 2) !== 'zh') {
-    //     $('.slick-prev').attr('title', 'previous');
-    //     $('.slick-next').attr('title', 'next');
-    //     $('.slick-prev').removeAttr('aria-label');
-    //     $('.slick-next').removeAttr('aria-label');
-    // }
-    // 首頁輪播
-    
+    }); 
 
 })
 // 輪播col 設定
