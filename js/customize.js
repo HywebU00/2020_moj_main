@@ -1,7 +1,7 @@
 // 自行加入的JS請寫在這裡
 $(function() {
     //tabContent new tag
-    $('.text_link ul li a').has('span.new_tag').css('paddingRight','4.2em');
+    $('.text_link ul li a').has('span.new_tag').css('paddingRight', '4.2em');
     //小廣告展開收合
     $('.btn_ad_more').click(function(e) {
         $(this).parents('.ad_banner_accordion').find('.ad_more').stop(true, true).slideToggle(function() {
@@ -15,8 +15,62 @@ $(function() {
         });
         $(this).stop(true, true).toggleClass('close');
     });
+    // var weblang = $('html').attr('lang');
+    // if (weblang.substring(0, 2) == 'zh') {
+    //      console.log("中文");
+    //     $('.slick-prev').attr('title', '上一筆');
+    //     $('.slick-next').attr('title', '下一筆');
+    //     $('.slick-prev').html('上一筆');
+    //     $('.slick-next').html('下一筆');
+    //     $('.slick-prev').removeAttr('aria-label');
+    //     $('.slick-next').removeAttr('aria-label');
+    // } else if (weblang.substring(0, 2) !== 'zh') {
+    //     $('.slick-prev').attr('title', 'previous');
+    //     $('.slick-next').attr('title', 'next');
+    //     $('.slick-prev').removeAttr('aria-label');
+    //     $('.slick-next').removeAttr('aria-label');
+    // }
     // 首頁輪播
-    $('.mpSlider').slick({
+    
+
+})
+// 輪播col 設定
+// 圖文卡片式
+$('.col-12 .news_card ul').slick({
+    dots: false,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    pauseOnHover: true,
+    arrow: true,
+    responsive: [{
+        breakpoint: 1024,
+        settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            infinite: true,
+            dots: false,
+            arrows: true
+        }
+    }, {
+        breakpoint: 992,
+        settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            arrows: true
+        }
+    }, {
+        breakpoint: 575,
+        settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: true
+        }
+    }]
+});
+$('.mpSlider').slick({
         mobileFirst: true,
         dots: false,
         arrow: true,
@@ -198,44 +252,6 @@ $(function() {
         focusOnSelect: true,
         infinite: true
     });
-
-})
-// 輪播col 設定
-// 圖文卡片式
-$('.col-12 .news_card ul').slick({
-    dots: false,
-    infinite: true,
-    speed: 300,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    pauseOnHover: true,
-    arrow: true,
-    responsive: [{
-        breakpoint: 1024,
-        settings: {
-            slidesToShow: 3,
-            slidesToScroll: 3,
-            infinite: true,
-            dots: false,
-            arrows: true
-        }
-    }, {
-        breakpoint: 992,
-        settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2,
-            arrows: true
-        }
-    }, {
-        breakpoint: 575,
-        settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            arrows: true
-        }
-    }]
-});
 $('.col-4-8 .col:nth-child(2) .news_card ul').slick({
     dots: false,
     infinite: true,

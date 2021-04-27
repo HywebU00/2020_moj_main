@@ -60,7 +60,7 @@
 // slick._scss
 // adSlider
 .adSlider {
-    @include gutter(70px);
+    @include gutter(40px);
     margin-bottom: 20px;
 
     @include screen('mobile') {
@@ -81,6 +81,7 @@
         width: 165px;
         height: 55px;
         margin: 0px 15px;
+        background-color: transparent;
 
         a {
             display: block;
@@ -88,6 +89,8 @@
             img {
                 margin: 0 auto;
                 object-fit: contain;
+                border: 1px solid #ccc;
+
             }
         }
     }

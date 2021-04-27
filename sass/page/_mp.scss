@@ -299,56 +299,56 @@
 }
 
 // 廣告輪播
-.adSlider {
-    @include gutter(70px);
-    margin-bottom: 20px;
+// .adSlider {
+//     @include gutter(120px);
+//     margin-bottom: 20px;
 
-    @include screen('mobile') {
-        @include gutter();
-    }
+//     @include screen('mobile') {
+//         @include gutter();
+//     }
 
-    .slick-prev {
-        background: url(../vendor/slick/icon_arrow_left_inverse.png) no-repeat center center;
-        background-size: 80%;
-        left: -15px;
-    }
+//     .slick-prev {
+//         background: url(../vendor/slick/icon_arrow_left_inverse.png) no-repeat center center;
+//         background-size: 80%;
+//         left: 0;
+//     }
 
-    .slick-next {
-        background: url(../vendor/slick/icon_arrow_right_inverse.png) no-repeat center center;
-        background-size: 80%;
-        right: -15px;
-    }
+//     .slick-next {
+//         background: url(../vendor/slick/icon_arrow_right_inverse.png) no-repeat center center;
+//         background-size: 80%;
+//         right: 0;
+//     }
 
-    .img-container {
-        width: 165px;
-        height: 55px;
-        margin: 0px 15px;
+//     .img-container {
+//         width: 165px;
+//         height: 55px;
+//         margin: 0px 15px;
 
-        a {
-            display: block;
-            text-align: center;
+//         a {
+//             display: block;
+//             text-align: center;
 
-            img {
-                margin: 0 auto;
-            }
-        }
+//             img {
+//                 margin: 0 auto;
+//             }
+//         }
 
-        &:focus {
-            &:before {
-                content: "";
-                position: absolute;
-                z-index: 9;
-                width: 100%;
-                height: 100%;
-                top: 0;
-                left: 0;
-                bottom: 0;
-                right: 0;
-                box-shadow: 0 0px 0px 3px $primaryColor inset;
-            }
-        }
-    }
-}
+//         &:focus {
+//             &:before {
+//                 content: "";
+//                 position: absolute;
+//                 z-index: 9;
+//                 width: 100%;
+//                 height: 100%;
+//                 top: 0;
+//                 left: 0;
+//                 bottom: 0;
+//                 right: 0;
+//                 box-shadow: 0 0px 0px 3px $primaryColor inset;
+//             }
+//         }
+//     }
+// }
 
 // 跑馬燈
 .marquee,
@@ -947,7 +947,6 @@
             width: 165px;
             height: 55px;
             margin: 0px 15px 10px;
-            padding:0 1em;
             box-sizing: border-box;
             text-align: center;
             .img-container{

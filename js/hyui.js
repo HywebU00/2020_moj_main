@@ -285,16 +285,35 @@ $(function() {
     /*-----------------------------------*/
     $('.btn-fatfooter').click(function(e) {
         $(this).parent('.container').find('nav>ul>li>ul').stop(true, true).slideToggle(function() {
-            if ($(this).is(':visible')) {
-                $('.btn-fatfooter').html("收合/CLOSE");
-                $('.btn-fatfooter').attr('name', '收合選單/CLOSE');
-            } else {
-                $('.btn-fatfooter').html("展開/OPEN");
-                $('.btn-fatfooter').attr('name', '展開選單/OPEN');
+            if ($('html')[0].hasAttribute("lang")) {
+                var weblang = $('html').attr('lang');
+                if (weblang.substring(0, 2) == 'zh') {
+                    $('.btn-fatfooter').attr('aria-label', '底部選單區塊收合');
+                    if ($(this).is(':visible')) {
+                        $('.btn-fatfooter').html("收合");
+                        $('.btn-fatfooter').attr('name', '收合選單');
+                        $('.btn-fatfooter').attr('aria-expanded', 'true');
+                    } else {
+                        $('.btn-fatfooter').html("展開");
+                        $('.btn-fatfooter').attr('name', '展開選單');
+                        $('.btn-fatfooter').attr('aria-expanded', 'false');
+                    }
+                } else if (weblang.substring(0, 2) !== 'zh') {
+                    $('.btn-fatfooter').attr('aria-label', 'Fatfooter menu collapse');
+                    if ($(this).is(':visible')) {
+                        $('.btn-fatfooter').html("CLOSE");
+                        $('.btn-fatfooter').attr('name', 'CLOSE');
+                    } else {
+                        $('.btn-fatfooter').html("OPEN");
+                        $('.btn-fatfooter').attr('name', 'OPEN');
+
+                    }
+                }
             }
+            $(this).stop(true, true).toggleClass('close');
         });
-        $(this).stop(true, true).toggleClass('close');
     });
+
     /*-----------------------------------*/
     //////////////相簿燈箱//////////////
     /*-----------------------------------*/
@@ -607,17 +626,25 @@ $(function() {
             $('footer').find('.accesskey').focus();
         }
     });
-    //無障礙切換slick箭頭語系
-    if ($('html')[0].hasAttribute("labg")) {
+    //無障礙切換slick箭頭語系 & fatfooter button語系
+    $('.slick-prev').removeAttr('aria-label');
+    $('.slick-next').removeAttr('aria-label');
+    if ($('html')[0].hasAttribute("lang")) {
         var weblang = $('html').attr('lang');
         if (weblang.substring(0, 2) == 'zh') {
+            //console.log("中文");
             $('.slick-prev').attr('title', '上一筆');
             $('.slick-next').attr('title', '下一筆');
+            $('.slick-prev').html('上一筆');
+            $('.slick-next').html('下一筆');
+            $('.btn-fatfooter').attr('aria-label', '底部選單區塊收合');
         } else if (weblang.substring(0, 2) !== 'zh') {
             $('.slick-prev').attr('title', 'previous');
             $('.slick-next').attr('title', 'next');
+            $('.btn-fatfooter').attr('aria-label', 'Fatfooter menu collapse');
         }
     }
+
     // 無障礙錨點切換語系，更改accesskey的title名稱
     var weblang = $('html').attr('lang');
     if (weblang.substring(0, 2) == 'zh') {
@@ -754,7 +781,7 @@ $(function() {
             $(this).css('top', '-2000px');
         });
         if (ww < wwSmall) {
-            $('body').removeClass('noscroll'); 
+            $('body').removeClass('noscroll');
         }
     }
     $('nav.units_block .close,nav.units_block .overlay').click(function(event) {
