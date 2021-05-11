@@ -607,3 +607,25 @@ div.tag {
     text-align: left;
     padding-top: 2em;
 }
+
+.document_layout{
+    // >ul{
+    //     @include li-reset;
+    // }
+    ul, ol{
+        font-size: 1.125rem;
+        margin-bottom: .25em;
+    }
+    ul{
+        list-style: none;
+    }
+    li{
+        margin-bottom: .25em;
+        position: relative;
+        &:before{
+            content: attr(data-list);
+            padding-left: absolute;
+            margin-right: .5em;
+        }
+    }
+}
