@@ -16,12 +16,15 @@ h2.title {
     }
     p{
         >img{
-            max-width: 600px;
+            max-width: 500px;
             height: auto;
-            margin: 0 auto;
-            display: block;
+            margin: .5em;
+            display: inline-block;
+            vertical-align: top;
             @include screen('mobile'){
                 max-width: 100%;
+                margin: 0 0 .5em 0;
+                height: auto!important;
             }
         }
     }
