@@ -2,7 +2,7 @@
     table {
         td {
             a {
-                @include aSetting_nocolor;
+                //@include aSetting_nocolor;
             }
 
             &.date,
@@ -211,4 +211,9 @@
 }
 .ui-widget-content{
     z-index: 100 !important;
+}
+
+td[data-title="參與調查"],
+td[data-title="觀看結果"]{
+    text-align: center;
 }

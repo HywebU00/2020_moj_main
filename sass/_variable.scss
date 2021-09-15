@@ -25,7 +25,7 @@ $third-color: #016B94;
 $fourth-color: #01946D;
 // 連結顏色
 $aColor: #057b7c;
-$aHover: lighten($aColor, 10);
+$aHover: darken($aColor, 10);
 
 // 表單focus顏色337ab7
 $form-focus: #337ab7; //表單
