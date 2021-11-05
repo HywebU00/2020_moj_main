@@ -53,7 +53,8 @@ $(function() {
     var _sidebar = $('.sidebar'),
         _search = $('.search'),
         _nav = $('.navigation'),
-        _uni = $('.units'),
+        _units = $('.units'),
+        _units_block = $('.units_block'),
         _sidebarClose = $('.sidebarClose'),
         _sidebarCtrl = $('.sidebarCtrl'),
         _overlay = $('.menu_overlay');
@@ -165,8 +166,10 @@ $(function() {
             hideSidebar();
             _body.removeClass('noscroll');
             _nav.prependTo('.header .container');
-            _uni.prependTo('.header .container');
-            $('.units_block').prependTo('.wrapper');
+            _units.prependTo('.header .container');
+            //_units.insertAfter('.header .accesskey');
+            //$('.units_block').prependTo('.wrapper');
+            _units_block.insertAfter('.header .units');
             _search.appendTo('.header .container');
             _menu.appendTo('.header .container');
             _search.removeClass('m_search');
