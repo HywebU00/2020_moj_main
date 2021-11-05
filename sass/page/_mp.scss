@@ -1030,10 +1030,11 @@
                 border-bottom: 1px dotted $color-gray;
 
                 time {
-                    flex: 0 0 90px;
+                    flex: 0 0 auto;
                     margin-right: 1em;
                     font-size: .813em;
                     color: lighten($color-word, 20);
+                    white-space: nowrap;
                 }
 
                 a {
