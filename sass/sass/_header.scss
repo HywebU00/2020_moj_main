@@ -530,9 +530,9 @@
 .units_block {
     display: none;
     width: 100%;
-    height: auto;
+    height: 100%;
     min-height: auto;
-    position: absolute;
+    position: fixed;
     z-index: 9999;
     background: rgba(0, 0, 0, .9);
     top: 0px;

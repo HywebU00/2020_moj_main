@@ -1025,6 +1025,7 @@
 
         >ul {
             li {
+                position: relative;
                 padding: .5em 0;
                 display: flex;
                 border-bottom: 1px dotted $color-gray;
@@ -1048,6 +1049,11 @@
                         color: $aHover;
                     }
                 }
+            }
+            .new_tag{
+                position: absolute;
+                left: 0;
+                bottom: .5em;
             }
         }
 

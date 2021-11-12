@@ -2,6 +2,7 @@
 a:focus {
     outline: none;
     box-shadow: 0 0px 0px 2px $secondaryColor inset;
+
     @include screen('mobile') {
         box-shadow: none;
     }
@@ -15,20 +16,22 @@ a:focus {
     z-index: 9;
     color: $color-word;
     font-size: $font-size;
+
     @include screen("mobile") {
         display: none;
     }
 }
+
 // tag
 [class^="col"] span {
     &.tag {
         display: inline-block;
-        height: 1.5em;
+        height: 1.4em;
         vertical-align: middle;
         text-align: center;
         color: #FFF;
         background: #666;
-        line-height: 1.5em;
+        line-height: 1.4em;
         min-width: 5em;
         padding: 0 .5em;
         font-size: .938em;
@@ -36,27 +39,34 @@ a:focus {
         margin-right: .5em;
         margin-bottom: 3px;
     }
-    &.new_tag{
-        width:auto;
+
+    &.new_tag {
+        width: auto;
         min-width: 3em;
-        font-style:italic;
-        background: darken($color-orange,5);
-        line-height:1.4em;
+        font-style: italic;
+        background: darken($color-orange, 5);
+        line-height: 1.4em;
+        padding-left: 0.3em;
     }
+
     &.red {
-        background: darken($color-red,10);
+        background: darken($color-red, 10);
     }
+
     &.green {
-        background: darken($color-green,10);
+        background: darken($color-green, 10);
     }
+
     &.blue {
-        background: darken($color-blue,15);
+        background: darken($color-blue, 15);
     }
+
     &.orange {
-        background: darken($color-orange,10);
+        background: darken($color-orange, 10);
     }
+
     &.purple {
-        background: darken($color-purple,10);
+        background: darken($color-purple, 10);
     }
 }
 
@@ -67,7 +77,7 @@ a.more {
     width: 120px;
     font-size: .875em;
     text-align: center;
-    padding:3px 10px;
+    padding: 3px 10px;
     margin: 25px auto 15px;
     color: $primaryColor;
     border: 1px solid $primaryColor;
@@ -82,6 +92,7 @@ a.more {
     transition-property: color;
     -webkit-transition-duration: 0.2s;
     transition-duration: 0.2s;
+
     &:after {
         content: "";
         width: 6px;
@@ -95,6 +106,7 @@ a.more {
         border-bottom: none;
         transition: .3s ease-out;
     }
+
     &:before {
         content: "";
         position: absolute;
@@ -113,14 +125,17 @@ a.more {
         -webkit-transition-timing-function: ease-out;
         transition-timing-function: ease-out;
     }
+
     &:hover,
     &:focus,
     &.active {
         color: white;
+
         &:before {
             -webkit-transform: scale(1);
             transform: scale(1);
         }
+
         &:after {
             right: 10px;
         }
@@ -144,9 +159,11 @@ a.more {
     display: none;
     z-index: 99999999;
     text-indent: -999999px;
-    &:hover,&:focus{
+
+    &:hover,
+    &:focus {
         background: url(../images/basic/top.png) no-repeat center top rgba(0, 0, 0, 0.8);
-        box-shadow:none;
+        box-shadow: none;
     }
 }
 
@@ -154,6 +171,7 @@ a.more {
 img.img-responsive {
     @include img-responsive();
 }
+
 // 表單必填
 .necessary {
     color: red;
@@ -163,6 +181,7 @@ img.img-responsive {
 .tooltip {
     text-align: center;
     padding: 40px 0;
+
     span {
         display: inline-block;
         background: #DEDEDE;
@@ -173,17 +192,8 @@ img.img-responsive {
         line-height: 20px;
         vertical-align: baseline;
     }
+
     p>em {
         color: red;
     }
 }
-
-
-
-
-
-
-
-
-
-
