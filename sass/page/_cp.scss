@@ -9,7 +9,7 @@ h2.title {
 
 .cp {
     h3.title{
-        color:lighten($primaryColor, 10);
+        color:lighten($primaryColor, 0);
         line-height:1.8;
         font-weight:500;
         margin:.5em 0;
@@ -301,8 +301,8 @@ div.tag {
 
         .update,
         .file_view {
-            font-size: .938åem;
-            color: #999;
+            font-size: .938em;
+            color: #757575;
             width: 120px;
             padding-left: 1em;
             float: none;

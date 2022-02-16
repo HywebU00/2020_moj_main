@@ -16,7 +16,7 @@
         border: 1px solid #CCC;
         padding: .25em 1em;
         display: block;
-        color: $primaryColor;
+        color: darken($primaryColor, 5);
         @include box-sizing();
         border-radius:4px;
         &:hover,

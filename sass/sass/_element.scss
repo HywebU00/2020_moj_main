@@ -44,7 +44,7 @@ a:focus {
         width: auto;
         min-width: 3em;
         font-style: italic;
-        background: darken($color-orange, 5);
+        background: darken($color-orange, 0);
         line-height: 1.4em;
         padding-left: 0.3em;
     }
@@ -174,7 +174,7 @@ img.img-responsive {
 
 // 表單必填
 .necessary {
-    color: red;
+    color: #c00;
     margin: 0px .2em;
 }
 
