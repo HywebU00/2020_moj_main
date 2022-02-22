@@ -31,7 +31,7 @@ a:focus {
         text-align: center;
         color: #FFF;
         background: #666;
-        line-height: 1.4em;
+        line-height: 1.5em;
         min-width: 5em;
         padding: 0 .5em;
         font-size: .938em;
@@ -45,7 +45,7 @@ a:focus {
         min-width: 3em;
         font-style: italic;
         background: darken($color-orange, 0);
-        line-height: 1.4em;
+        line-height: 1.5em;
         padding-left: 0.3em;
     }
 
@@ -150,7 +150,7 @@ a.more {
     background: url(../images/basic/top.png) no-repeat center top rgba(0, 0, 0, 0.4);
     text-align: center;
     color: #FFF;
-    line-height: 50px;
+    line-height: 3.125em;
     text-decoration: none;
     position: fixed;
     bottom: 10px;
@@ -189,7 +189,7 @@ img.img-responsive {
         padding: 10px;
         width: 100px;
         height: 20px;
-        line-height: 20px;
+        line-height: 1.25em;
         vertical-align: baseline;
     }
 

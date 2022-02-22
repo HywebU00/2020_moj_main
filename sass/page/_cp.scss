@@ -333,7 +333,8 @@ div.tag {
             padding: 0px;
             position: relative;
             height: auto;
-            line-height: 20px;
+            // line-height: 20px;
+            line-height: 1.25em;
             display: inline-block;
             vertical-align: middle;
             margin: 0px .2em;
@@ -551,7 +552,7 @@ div.tag {
             padding: .2em 0px .2em 1em;
             position: relative;
             height: auto;
-            line-height: 1.45em;
+            line-height: 1.5em;
             display: block;
             font-size:1.125em;
             @include aSetting_nocolor;

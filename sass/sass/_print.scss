@@ -15,7 +15,6 @@
     /* -------------------------------各別顯示設定----//*/
     body {
         background: transparent;
-        // font-size: 12pt;
         float: none;
         width: 100%;
         @extend %no-bg;
@@ -40,7 +39,6 @@
         max-width: 100%;
         box-shadow: none;
         float: none;
-        // font-size: 12pt;
         @include clearfix;
         @extend %no-bg;
         padding-top: 0px !important;

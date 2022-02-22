@@ -33,7 +33,7 @@
         position: absolute;
         top: 0px;
         display: block;
-        font-size: 0em;
+        font-size: 0;
         padding: 15px;
         margin: 0;
         min-width: auto;
@@ -87,7 +87,7 @@
         .searchCtrl {
             display: none;
             right: 0px;
-            font-size: 0em;
+            font-size: 0;
             filter: invert(1);
             @extend %mobileCtrlBtn;
 
@@ -475,7 +475,7 @@
     position: absolute;
     top: 0;
     left: 30px;
-    line-height: 38px;
+    line-height: 2.375em;
 
     @include screen('mobile') {
         left: 60px;
