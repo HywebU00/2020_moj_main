@@ -951,17 +951,27 @@
             margin: 0px 15px 10px;
             box-sizing: border-box;
             text-align: center;
-            .img-container{
-                width: 165px;
-                height: 55px;
-                margin: 0px auto;
-                box-sizing: border-box;
-                img{
-                    border:1px solid $color-gray;
-                }
-            }
+          //   @include screen('mobile') {
+          //     width: calc(50% - 32px);  
+          // }
+          @include screen('xs_mobile') {
+            margin: 0px 10px 10px;
         }
+        .img-container{
+            width: 165px;
+            height: 55px;
+            margin: 0px auto;
+            box-sizing: border-box;
+            img{
+                border:1px solid $color-gray;
+            }
+            // @include screen('mobile') {
+            //     width: 100%;
+            // }
+        }
+
     }
+}
 }
 
 .ad_banner2{
