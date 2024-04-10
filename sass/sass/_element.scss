@@ -43,10 +43,12 @@ a:focus {
     &.new_tag {
         width: auto;
         min-width: 3em;
+        height: auto;
         font-style: italic;
         background: darken($color-orange, 0);
-        line-height: 1.5em;
-        padding-left: 0.3em;
+        line-height: 1em;
+        padding: .2em .5em .2em .3em;
+        // padding-left: 0.3em;
     }
 
     &.red {
