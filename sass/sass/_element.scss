@@ -167,6 +167,9 @@ a.more {
         background: url(../images/basic/top.png) no-repeat center top rgba(0, 0, 0, 0.8);
         box-shadow: none;
     }
+    &:focus-visible{
+        box-shadow: 0 0px 0px 3px $secondaryColor inset;
+    }
 }
 
 // img

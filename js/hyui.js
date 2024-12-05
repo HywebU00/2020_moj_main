@@ -501,10 +501,10 @@ $(function() {
         $('html, body').animate({ scrollTop: 0 }, 400, 'easeOutExpo');
         e.preventDefault();
     });
-    $('.scrollToTop').keydown(function(e) {
-        _body.find('a:first').focus();
-        e.preventDefault();
-    });
+    // $('.scrollToTop').keydown(function(e) {
+    //     _body.find('a:first').focus();
+    //     e.preventDefault();
+    // });
     /*--------------------------------------------------------*/
     /////設定img 在IE9+ SAFARI FIREFOX CHROME 可以object-fit/////
     /*--------------------------------------------------------*/
